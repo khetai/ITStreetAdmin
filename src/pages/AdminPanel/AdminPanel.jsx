@@ -5,8 +5,8 @@ import { Helmet } from "react-helmet-async";
 import AdminTable from "../../components/AdminPanelComponents/AdminTable";
 import { removeCookieAll } from "../../helpers/cookie";
 import { MainContext } from "../../contexts/mainContextProvider";
-const { setUser } = useContext(MainContext);
 function AdminPanel() {
+  const { setUser } = useContext(MainContext);
   const [toggle, setToggle] = useState(false);
   const Logout = () => {
     removeCookieAll();

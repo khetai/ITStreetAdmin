@@ -16,7 +16,7 @@ export function MainContextProvider({ children }) {
     if (refreshToken !== undefined) {
       try {
         const response = await fetch(
-          `https://apistreet.aimtech.az/api/Auth/LoginWithRefreshToken?refreshToken=${refreshToken}`,
+          `https://api.it-street.az/api/Auth/LoginWithRefreshToken?refreshToken=${refreshToken}`,
           {
             method: "POST",
             headers: {
