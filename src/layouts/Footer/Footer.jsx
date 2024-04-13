@@ -1,11 +1,9 @@
-import React from "react";
-import navBrand from "../../assets/imgs/navBrand.svg";
+import { Link, useNavigate } from "react-router-dom";
 import Logo from "../../assets/imgs/Logo.jpg";
-
 import "./index.scss";
-import { Link } from "react-router-dom";
 
 function Footer() {
+  const navigate = useNavigate()
   return (
     <footer className="container">
       <div className="social">
@@ -32,8 +30,8 @@ function Footer() {
       </div>
       <hr />
       <div className="copyright">
-        <div>
-          Copyright 2023 © <strong>Market Yandex.</strong>
+        <div onClick={()=>navigate("/adminpanel/products")}>
+          Copyright 2023 © <strong>ITSTREET.</strong>
         </div>
       </div>
     </footer>

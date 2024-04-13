@@ -1,0 +1,18 @@
+.admin_table_search{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    input{
+        outline: none;
+        padding:2px 10px;
+    }
+    label{
+        margin-right: 10px;
+    }
+}
+.admin_table_bnt{
+    padding: 8px 16px;
+    border-radius: 5px;
+  }
+
+  

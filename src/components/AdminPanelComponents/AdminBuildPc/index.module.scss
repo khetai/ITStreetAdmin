@@ -1,0 +1,173 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 20px;
+  h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .categories {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      width: 33%;
+      .category {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        p {
+          padding: 12px;
+          border-radius: 8px;
+          box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+          cursor: pointer;
+          background-color: #5757eb;
+          color: #fff;
+          position: relative;
+          &.ready {
+            background-color: #3a3a9b;
+            border-radius: 8px 0 0 8px;
+            &::after {
+              content: '';
+              position: absolute;
+              top: 0;
+              right: -22.5px;
+              width: 0;
+              height: 0;
+              border-top: 23px solid transparent;
+              border-bottom: 23px solid transparent;
+              border-left: 23px solid #3a3a9b;
+            }
+          }
+          &.disabled {
+            background-color: #ccc;
+            color: #000;
+            cursor: not-allowed;
+          }
+        }
+        ul {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 20px;
+          padding-left: 12px;
+          li {
+            width: 100%;
+            border-radius: 8px;
+            padding: 8px;
+            box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 2px;
+            transition: all 300ms;
+            cursor: pointer;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 20px;
+            &:hover {
+              box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 8px;
+            }
+            &.active_item {
+              animation: bordered 1.2s infinite ease-in-out;
+            }
+            &.selected_item {
+              background-color: #afe1af;
+              color: #333;
+              box-shadow: #afe1af 0px 0px 0px 2px;
+            }
+          }
+        }
+      }
+    }
+    .choosen {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      width: 32%;
+      align-items: center;
+      // width: 400px;
+      button {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        margin: 12px 0;
+        // border: 1px solid rgb(87, 87, 235);
+        border-radius: 8px;
+        outline: none;
+        transition: all 400ms;
+        cursor: pointer;
+        // border: 1px solid rgb(87, 87, 235);
+        background-color: #04aa6d;
+        color: white;
+      }
+      li {
+        width: 100%;
+        border-radius: 8px;
+        padding: 8px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
+          rgba(17, 17, 26, 0.1) 0px 0px 8px;
+        i {
+          cursor: pointer;
+        }
+      }
+      ol {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+      .choosen_category {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgba(3, 102, 214, 0.3);
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
+          rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+          rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+        border-radius: 8px;
+      }
+      .exist_item {
+        background-color: #afe1af;
+        color: #333;
+        box-shadow: #afe1af 0px 0px 0px 2px;
+      }
+    }
+  }
+}
+
+@keyframes bordered {
+  0% {
+    box-shadow: rgba(3, 102, 214, 0.4) 0px 0px 0px 3px;
+  }
+  50% {
+    box-shadow: rgba(3, 102, 214, 0.55) 0px 0px 0px 9px;
+  }
+  100% {
+    box-shadow: rgba(3, 102, 214, 0.4) 0px 0px 0px 3px;
+  }
+}
+.spinner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  & > i {
+    margin: 20px auto;
+    color: #5757eb;
+    font-size: 3rem;
+  }
+}

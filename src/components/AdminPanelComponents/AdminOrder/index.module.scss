@@ -1,0 +1,115 @@
+.admin_table_search {
+    input {
+      outline: none;
+      padding: 2px 10px;
+    }
+    label {
+      margin-right: 10px;
+    }
+  }
+  .admin_table_bnt {
+    padding: 8px 16px;
+    border-radius: 5px;
+  }
+  
+  .admin_pagination {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+  
+    button {
+      padding: 8px 16px;
+      margin: 0 4px;
+      cursor: pointer;
+      background-color: #2a3042;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      outline: none;
+      transition: background-color 0.3s ease;
+  
+      &:hover {
+        background-color: #3498db;
+      }
+  
+      &:disabled {
+        background-color: #dcdcdc;
+        color: #666;
+        cursor: not-allowed;
+      }
+    }
+  }
+  .wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 2;
+  }
+  .popupBody {
+    position: fixed;
+    z-index: 3;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    // height: 60vh;
+    height: max-content;
+    max-height: calc(100vh - 64px);
+    overflow-y: auto;
+    width: 60%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 20px;
+    .cancelIcon {
+      color: red;
+      position: absolute;
+      right: 20px;
+      top: 10px;
+      z-index: 4;
+      cursor: pointer;
+      font-size: 32px;
+    }
+    form {
+      margin-top: 40px;
+      display: flex;
+      flex-direction: column;
+      input {
+        margin-bottom: 20px;
+        margin-top: 10px;
+        outline: none;
+        padding: 10px;
+      }
+      label {
+        width: 100%;
+        display: flex;
+        gap: 12px;
+        align-items: center;
+  
+        justify-content: space-between;
+        input {
+          width: calc(100% - 120px);
+        }
+      }
+      .formBtn {
+        width: 100px;
+        padding: 16px;
+        text-align: center;
+        margin: auto;
+        border-radius: 10px;
+        margin-top: 20px;
+      }
+    }
+  }
+  @media screen and (max-width: 900px) {
+    .popupBody {
+      width: 100%;
+      height: 100%;
+      border-radius: 0;
+    }
+  }
+    
